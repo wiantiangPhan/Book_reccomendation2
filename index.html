@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <link href="lightbox.min.css" rel="stylesheet" />
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
@@ -59,17 +58,11 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             border-radius: 8px;
             cursor: pointer; 
-            
-            /* ===== 2. เพิ่ม CSS สำหรับ Hover Effect ===== */
-            transition: transform 0.3s ease-in-out; /* ทำให้การขยับนุ่มนวล */
+            transition: transform 0.3s ease-in-out;
         }
-
         .book-cover:hover {
-            transform: scale(1.05); /* ขยาย 5% เมื่อเมาส์ชี้ */
+            transform: scale(1.05);
         }
-        /* ===== จบส่วน Hover Effect ===== */
-
-
         .content-section {
             padding: 2rem 0;
             line-height: 1.8;
@@ -80,6 +73,19 @@
             text-align: center;
         }
         
+        /* สไตล์สำหรับส่วนกระตุ้นให้อ่าน */
+        .catchy-intro {
+            padding: 2.5rem 1.5rem;
+            margin: 2rem 0;
+            background-color: #e9ecef; /* Light gray bg */
+            border-radius: 8px;
+            text-align: center;
+        }
+        .catchy-intro h2 {
+            font-weight: 700;
+            color: #000f92;
+        }
+
         @media (max-width: 767.98px) {
             .hero-section, .hero-section2 {
                 padding: 2rem 0;
@@ -107,24 +113,29 @@
     </style>
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg" data-aos="fade-down">
         <div class="container">
-            <a class="navbar-brand" href="#">BookReview</a>
+            <a class="navbar-brand" href="index.html">BookReview</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">บทความ</a>
+                        <a class="nav-link" href="index.html">บทความ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">เกี่ยวกับ</a>
+                        <a class="nav-link" href="https://amarinbooks.com/brand/amarin-how-to/" target="_blank" rel="noopener">เกี่ยวกับ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ติดต่อ</a>
+                        <a class="nav-link" href="https://www.facebook.com/pong.phanthakan" target="_blank" rel="noopener">ติดต่อ</a>
                     </li>
                 </ul>
+                <form class="d-flex" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+                    <input class="form-control me-2" type="search" name="q" placeholder="ค้นหา Google" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit">ค้นหา</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -145,29 +156,27 @@
         </div>
     </div>
 
-    <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <p>
-                    ในโลกยุคปัจจุบันปัญญาประดิษฐ์ (AI) พัฒนาไปอย่างก้าวกระโดด ข้อมูลข่าวสารท่วมท้น การเปลี่ยนแปลงเกิดขึ้นอย่างรวดเร็ว จนแทบไม่ทันตั้งตัว คำถามสำคัญที่เกิดขึ้นคือ
-                </p>
-                <div class="quote" data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">
-                    <p class="mb-0">
-                        “มนุษย์จะเอาตัวรอดได้อย่างไร”
-                    </p>
+    <div class="container content-section text-center" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 style="font-weight: 700;">ข้อมูลหนังสือ</h3>
+                <p class="lead mb-2"><strong>ผู้เขียน:</strong> ศุภกฤต อังก์วราปิติกร</p>
+                <p class="lead mb-2"><strong>แนว:</strong> จิตวิทยาและการพัฒนาตนเอง</p>
+                <h4 class="mb-3" style="color: #0d6445;">ราคา: 215.00 ฿</h4>
+                <a href="https://amarinbooks.com/product/critical-thinking-%e0%b8%9e%e0%b8%a5%e0%b8%b1%e0%b8%87%e0%b8%9e%e0%b8%b4%e0%b9%80%e0%b8%a8%e0%b8%a9%e0%b8%82%e0%b8%ad%e0%b8%87%e0%b8%aa%e0%b8%a1%e0%b8%ad%e0%b8%87%e0%b8%af/" class="btn btn-success btn-lg" target="_blank" rel="noopener">
+                    สั่งซื้อหนังสือ คลิกที่นี่
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section">
+        <div class="row justify-content-center">
+            <div class="col-lg-10" data-aos="zoom-in">
+                <div class="catchy-intro">
+                    <h2>ในยุคที่ AI คิดแทนเราได้... ทักษะอะไรที่จะทำให้คุณ "ไม่ถูกแทนที่"?</h2>
+                    <p class="lead mt-3">ค้นพบ "พลังพิเศษ" ที่ซ่อนอยู่ในสมองของคุณ ซึ่ง AI ก็ยังทำไม่ได้!</p>
                 </div>
-                <p>
-                    “Critical Thinking พลังพิเศษของสมองที่มีแต่มนุษย์เท่านั้นที่ทำได้” เล่มนี้ จึงถือกำเนิดขึ้น เพื่อช่วยให้คุณไม่เพียงแค่ตามทันโลก แต่ยังสามารถ “คิดให้ลํ้ากว่า” และ “ตัดสินใจได้อย่างเฉียบคม” ไม่ว่าคุณจะเป็นใคร ทำงานอะไร หรืออยู่ในวัยใดก็ตาม
-                </p>
-                <p>
-                    คุณทศ ศุภกฤต อังก์วราปิติกร ผู้เขียน เป็นผู้เชี่ยวชาญ อาจารย์ และที่ปรึกษาองค์กรชั้นนำในด้านนี้ นำเสนอ Critical Thinking ในรูปแบบที่เข้าใจง่าย
-                </p>
-                <p>พร้อมถ่ายทอดกระบวนคิด 32 ข้อที่จะพาคุณสำรวจการทำงานของสมอง รู้เท่าทันอคติทางความคิด ฝึกฝนการตั้งคำถาม และวิเคราะห์ข้อมูลเพื่อแยกแยะข้อเท็จจริงออกจากความเชื่อผิดๆ ที่รายล้อมอยู่รอบตัวเรา เช่นเดียวกับความสามารถอีกหลายๆ อย่างของมนุษย์
-                </p>
-                <P>Critical Thinking เป็นเรื่องที่สามารถฝึกฝนได้
-แค่ลองฝึกคิดในชีวิตประจำวันตามคำแนะนำในหนังสือเล่มนี้
-เมื่อเชี่ยวชาญแล้วคุณก็จะกลายเป็นเจ้าของทักษะลํ้าค่าที่จะติดตัวไปตลอดชีวิต
-</P>
             </div>
         </div>
     </div>
@@ -175,37 +184,59 @@
     <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
         <div class="row">
             <div class="col-lg-10 mx-auto">
-                <h2 class="text-center mb-4">แนวคิดหลักจากหนังสือ</h2>
+                <h2 class="text-center mb-4" style="font-weight: 700;">ทำไมคุณถึงควรอ่านเล่มนี้?</h2>
+                <p>
+                    ในโลกยุคปัจจุบันที่ปัญญาประดิษฐ์ (AI) พัฒนาไปอย่างก้าวกระโดด ข้อมูลข่าวสารท่วมท้น และการเปลี่ยนแปลงเกิดขึ้นอย่างรวดเร็ว... คำถามสำคัญคือ “มนุษย์จะเอาตัวรอดได้อย่างไร”
+                </p>
+                <div class="quote" data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">
+                    <p class="mb-0">
+                        “มนุษย์จะเอาตัวรอดได้อย่างไร”
+                    </p>
+                </div>
+                <p>
+                    หนังสือเล่มนี้ไม่ได้ให้คำตอบสำเร็จรูป แต่ให้ "เครื่องมือ" ที่ทรงพลังที่สุด นั่นคือ <strong>Critical Thinking</strong> หรือ "การคิดวิเคราะห์" นี่คือทักษะเดียวที่ AI ยังไม่สามารถเลียนแบบได้อย่างสมบูรณ์ และเป็นสิ่งที่จะแยกผู้รอดชีวิตออกจากผู้ที่ถูกกลืนหายไปในคลื่นการเปลี่ยนแปลง
+                </p>
+                <p>
+                    คุณทศ ศุภกฤต อังก์วราปิติกร ไม่ได้มาสอนทฤษฎีที่น่าเบื่อ แต่จะพาคุณไป "ฝึกฝน" กระบวนคิดผ่าน 32 ข้อคิด ที่จะช่วยให้คุณมองเห็นโลกในมุมใหม่ รู้เท่าทันอคติ และตัดสินใจได้อย่างเฉียบคม ไม่ว่าคุณจะเป็นใคร ทำงานอะไร หรืออยู่ในวัยใดก็ตาม
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4" style="font-weight: 700;">ประโยชน์ที่จะได้รับจากหนังสือเล่มนี้</h2>
                 
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1. รู้เท่าทันอคติ (Understanding Biases)
+                                1. ตัดสินใจแม่นยำขึ้น รู้เท่าทันอคติ (Make Better Decisions)
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                หนังสือจะสอนให้คุณรู้จักอคติทางความคิด (Cognitive Biases) ต่างๆ ที่ซ่อนอยู่ในการตัดสินใจของเรา ทำให้เราสามารถตั้งคำถามกับความคิดแรกของตัวเอง และป้องกันการตัดสินใจที่ผิดพลาด
+                                หนังสือจะสอนให้คุณรู้จักอคติ (Cognitive Biases) ที่ซ่อนอยู่ในการตัดสินใจของเรา ทำให้คุณตั้งคำถามกับความคิดแรกของตัวเอง และป้องกันการตัดสินใจที่ผิดพลาดในเรื่องสำคัญ
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2. ฝึกฝนการตั้งคำถาม (Asking the Right Questions)
+                                2. แก้ปัญหาเก่งขึ้นด้วยการตั้งคำถามที่ถูกต้อง (Solve Problems Effectively)
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                หัวใจของ Critical Thinking คือการตั้งคำถามที่ถูกต้อง "ทำไม?" "จริงหรือ?" "มีข้อมูลอื่นอีกไหม?" หนังสือเล่มนี้มีแบบฝึกหัด 32 ข้อเพื่อช่วยลับคมทักษะการตั้งคำถามของคุณ
+                                หัวใจของ Critical Thinking คือการตั้งคำถามที่ถูกต้อง "ทำไม?" "จริงหรือ?" "มีข้อมูลอื่นอีกไหม?" หนังสือเล่มนี้มีแบบฝึกหัด 32 ข้อที่จะช่วยลับคมทักษะการตั้งคำถามของคุณ
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3. วิเคราะห์และแยกแยะข้อมูล (Analyzing Information)
+                                3. แยกแยะข่าวจริง-ข่าวปลอมได้เฉียบคม (Identify Fake News)
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -225,6 +256,24 @@
             <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/ikWzqwgfiLA?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
         </div>
     </div>
+
+    <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4" style="font-weight: 700;">สรุปคุณค่าของหนังสือเล่มนี้</h2>
+                <p>
+                    Critical Thinking ไม่ใช่พรสวรรค์ แต่เป็น "ทักษะ" ที่ฝึกฝนได้ การลงทุนเวลาอ่านหนังสือเล่มนี้ คือการลงทุนเพื่ออัปเกรดสมองของคุณให้พร้อมรับมือกับอนาคต มันคือการสร้าง "พลังพิเศษ" ที่จะติดตัวคุณไปตลอดชีวิต ช่วยให้คุณเป็นคนที่คิดลึกซึ้งขึ้น ตัดสินใจดีขึ้น และมองเห็นโอกาสในขณะที่คนอื่นเห็นแต่วิกฤต
+                </p>
+                <p class="text-center lead mt-4" style="font-weight: 600;">
+                    อย่ารอให้โลกบังคับให้คุณเปลี่ยน...<br>จงเป็นผู้ "คิดให้ล้ำกว่า" ด้วยตัวคุณเอง
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center p-4" style="background-color: #f8f9fa; border-top: 1px solid #dee2e6;">
+        <p class="mb-0">© 2025 BookReview | This is a demo page.</p>
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lightbox-plus-jquery.min.js"></script>
@@ -233,5 +282,6 @@
     <script>
       AOS.init();
     </script>
-    </body>
+
+</body>
 </html>
