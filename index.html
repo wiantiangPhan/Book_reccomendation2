@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>รีวิวหนังสือ Critical Thinking - พลังพิเศษของสมอง | BookReview</title>
+    <meta name="description" content="รีวิวหนังสือ 'Critical Thinking พลังพิเศษของสมองที่มีแต่มนุษย์เท่านั้นที่ทำได้' โดย ทศ ศุภกฤต อังก์วราปิติกร เรียนรู้การคิดวิเคราะห์เพื่อเอาตัวรอดในยุค AI">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.google.com/specimen/BBH+Sans+Bartle" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="css/lightbox.min.css">
-<script src="js/lightbox-plus-jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link href="lightbox.min.css" rel="stylesheet" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Kanit', sans-serif;
@@ -34,12 +39,12 @@
         .hero-section2 {
             padding: 4rem 0;
             background-color: #170a52;
-            align-content: center; }
-
+            align-content: center; 
+        }
         .critical-thinking-title {
             font-weight: 700;
             font-size: 3.5rem;
-            color: #000f92;/
+            color: #000f92;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         .subtitle {
@@ -53,7 +58,18 @@
             height: auto;
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             border-radius: 8px;
+            cursor: pointer; 
+            
+            /* ===== 2. เพิ่ม CSS สำหรับ Hover Effect ===== */
+            transition: transform 0.3s ease-in-out; /* ทำให้การขยับนุ่มนวล */
         }
+
+        .book-cover:hover {
+            transform: scale(1.05); /* ขยาย 5% เมื่อเมาส์ชี้ */
+        }
+        /* ===== จบส่วน Hover Effect ===== */
+
+
         .content-section {
             padding: 2rem 0;
             line-height: 1.8;
@@ -61,14 +77,37 @@
         .quote {
             padding: 1.5rem;
             margin: 2rem 0;
+            text-align: center;
         }
-        p {text-align: center;}
+        
+        @media (max-width: 767.98px) {
+            .hero-section, .hero-section2 {
+                padding: 2rem 0;
+            }
+            .critical-thinking-title {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+            .subtitle {
+                font-size: 1.25rem;
+                text-align: center;
+            }
+            .book-cover {
+                max-width: 80%;
+                margin-top: 2rem;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .col-md-5.text-center.text-md-end {
+                text-align: center !important;
+            }
+        }
 
     </style>
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" data-aos="fade-down">
         <div class="container">
             <a class="navbar-brand" href="#">BookReview</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,13 +116,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">[เมนูไรสักอย่าง]</a>
+                        <a class="nav-link" href="#">บทความ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">[เมนูไรสักอย่าง]</a>
+                        <a class="nav-link" href="#">เกี่ยวกับ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">[เมนูไรสักอย่าง]</a>
+                        <a class="nav-link" href="#">ติดต่อ</a>
                     </li>
                 </ul>
             </div>
@@ -93,30 +132,32 @@
     <div class="hero-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-7">
+                <div class="col-md-7" data-aos="fade-right" data-aos-duration="1000">
                     <h1 class="critical-thinking-title">Critical Thinking</h1>
                     <h2 class="subtitle">พลังพิเศษของสมองที่มีแต่มนุษย์เท่านั้นที่ทำได้</h2>
                 </div>
-                <div class="col-md-5 text-center text-md-end">
-                    <img src="img/ภาพวาด4.png" alt="Critical Thinking Book Cover" class="book-cover">
+                <div class="col-md-5 text-center text-md-end" data-aos="fade-left" data-aos-duration="1000">
+                    <a href="img/ภาพวาด3.jpg" data-lightbox="book-cover-gallery" data-title="Critical Thinking Book Cover">
+                        <img src="img/ภาพวาด3.jpg" alt="Critical Thinking Book Cover" class="book-cover">
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container content-section">
+    <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <p>
-                    ในโลกยุคปัจจุบันปัญญาประดิษฐ์ (AI) พัฒนาไปอย่างก้าวกระโดด ข้อมูลข่าวสารท่วมท้น การเปลี่ยนแปลงเกิดขึ้นอย่างรวดเร็วจนแทบไม่ทันตั้งตัว คำถามสำคัญที่เกิดขึ้นคือ
+                    ในโลกยุคปัจจุบันปัญญาประดิษฐ์ (AI) พัฒนาไปอย่างก้าวกระโดด ข้อมูลข่าวสารท่วมท้น การเปลี่ยนแปลงเกิดขึ้นอย่างรวดเร็ว จนแทบไม่ทันตั้งตัว คำถามสำคัญที่เกิดขึ้นคือ
                 </p>
-                <div class="quote">
+                <div class="quote" data-aos="fade-in" data-aos-delay="200" data-aos-duration="800">
                     <p class="mb-0">
                         “มนุษย์จะเอาตัวรอดได้อย่างไร”
                     </p>
                 </div>
                 <p>
-                    “Critical Thinking พลังพิเศษของสมองที่มีแต่มนุษย์เท่านั้นที่ทำได้” เล่มนี้ จึงถือกำเนิดขึ้น เพื่อช่วยให้คุณไม่เพียงแค่ตามทันโลก แต่ยังสามารถ “คิดให้ลํ้ากว่า” และ “ตัดสินใจได้อย่างเฉียบคม” ไม่ว่าคุณจะเป็นใครทำงานอะไร หรืออยู่ในวัยใดก็ตาม
+                    “Critical Thinking พลังพิเศษของสมองที่มีแต่มนุษย์เท่านั้นที่ทำได้” เล่มนี้ จึงถือกำเนิดขึ้น เพื่อช่วยให้คุณไม่เพียงแค่ตามทันโลก แต่ยังสามารถ “คิดให้ลํ้ากว่า” และ “ตัดสินใจได้อย่างเฉียบคม” ไม่ว่าคุณจะเป็นใคร ทำงานอะไร หรืออยู่ในวัยใดก็ตาม
                 </p>
                 <p>
                     คุณทศ ศุภกฤต อังก์วราปิติกร ผู้เขียน เป็นผู้เชี่ยวชาญ อาจารย์ และที่ปรึกษาองค์กรชั้นนำในด้านนี้ นำเสนอ Critical Thinking ในรูปแบบที่เข้าใจง่าย
@@ -130,16 +171,67 @@
             </div>
         </div>
     </div>
-    <div class="hero-section2">
-    <div class="container">
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/oHyVL0MkZ-I?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
+
+    <div class="container content-section" data-aos="fade-up" data-aos-duration="800">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h2 class="text-center mb-4">แนวคิดหลักจากหนังสือ</h2>
+                
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                1. รู้เท่าทันอคติ (Understanding Biases)
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                หนังสือจะสอนให้คุณรู้จักอคติทางความคิด (Cognitive Biases) ต่างๆ ที่ซ่อนอยู่ในการตัดสินใจของเรา ทำให้เราสามารถตั้งคำถามกับความคิดแรกของตัวเอง และป้องกันการตัดสินใจที่ผิดพลาด
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                2. ฝึกฝนการตั้งคำถาม (Asking the Right Questions)
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                หัวใจของ Critical Thinking คือการตั้งคำถามที่ถูกต้อง "ทำไม?" "จริงหรือ?" "มีข้อมูลอื่นอีกไหม?" หนังสือเล่มนี้มีแบบฝึกหัด 32 ข้อเพื่อช่วยลับคมทักษะการตั้งคำถามของคุณ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                3. วิเคราะห์และแยกแยะข้อมูล (Analyzing Information)
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                ในยุคที่ข้อมูลท่วมท้น การแยกแยะข้อเท็จจริง (Fact) ออกจากความคิดเห็น (Opinion) และข้อมูลเท็จ (Misinformation) เป็นทักษะที่จำเป็นที่สุด ซึ่งหนังสือได้อธิบายกระบวนการไว้อย่างชัดเจน
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
+    
+    <div class="hero-section2" data-aos="zoom-in" data-aos-duration="800">
+        <div class="container">
+            <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/oHyVL0MkZ-I?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>
+        </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="lightbox-plus-jquery.min.js"></script>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    </body>
 </html>
-
-
-
